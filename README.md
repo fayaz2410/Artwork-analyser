@@ -28,7 +28,7 @@
 
     ```bash
 
-    git clone https://github.com/fayaz2410/artwork-emotion-analysis.git
+    git clone -b master https://github.com/fayaz2410/artwork-emotion-analysis.git
    
     cd artwork-emotion-analysis
 
