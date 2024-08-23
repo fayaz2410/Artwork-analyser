@@ -3,6 +3,8 @@ import requests  # Import requests to handle HTTP requests
 from PIL import Image  # Import PIL to handle image processing
 import io  # Import io to handle in-memory byte streams
 import json  # Import json to parse JSON responses
+import os # Import the os module for interacting with the operating system
+
 
 app = Flask(__name__)  # Initialize the Flask application
 
