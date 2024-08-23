@@ -9,7 +9,7 @@ app = Flask(__name__)  # Initialize the Flask application
 # Define the Hugging Face API keys and endpoints
 captioning_api_url = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-large"
 sentiment_api_url = "https://api-inference.huggingface.co/models/cardiffnlp/twitter-roberta-base-sentiment"
-headers = {"Authorization": "Bearer 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"}  # Replace with your actual Hugging Face API key
+headers = {"Authorization": "Bearer YOUR_HUGGING_FACE_API_KEY"}  # Replace with your actual Hugging Face API key
 
 def generate_caption(image_url):
     """
@@ -89,4 +89,4 @@ def index():
     return render_template("index.html", description=description, emotion=emotion, image_url=image_url)
 
 if __name__ == "__main__":
-    app.run(debug=True)  # Run the Flask application in debug mode
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)  # Run the Flask application
